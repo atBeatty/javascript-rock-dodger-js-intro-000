@@ -17,7 +17,7 @@ var gameInterval = null
  * but all of your work should happen below.
  */
 
-function checkCollision(rock) {
+function checkCollision() {
   // implement me!
   // use the comments below to guide you!
   const top = positionToInteger(rock.style.top)
@@ -73,12 +73,12 @@ function createRock(x) {
    * This function moves the rock. (2 pixels at a time
    * seems like a good pace.)
    */
-  function moveRock(rock) {
+  function moveRock() {
     /**
      * If a rock collides with the DODGER,
      * we should call endGame().
      */
-     if (checkCollision(rock)) {
+     if (checkCollision()) {
        return endGame();
      }
     /**
