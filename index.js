@@ -67,7 +67,7 @@ function createRock(x) {
    */
   GAME.appendChild(rock)
   //  GAME.append(rock)
-  
+
 
   /**
    * This function moves the rock. (2 pixels at a time
@@ -87,7 +87,7 @@ function createRock(x) {
      */
      if(top < 380) {
        for (var i = 0; i < 380; i += 2) {
-         rock.style.top += i; 
+         rock.style.top += i;
        }
     /**
      * But if the rock *has* reached the bottom of the GAME,
