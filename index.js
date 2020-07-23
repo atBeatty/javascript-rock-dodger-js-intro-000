@@ -75,7 +75,7 @@ function createRock(x) {
    * This function moves the rock. (2 pixels at a time
    * seems like a good pace.)
    */
-  function moveRock() {
+  function moveRock(rock) {
     /**
      * If a rock collides with the DODGER,
      * we should call endGame().
