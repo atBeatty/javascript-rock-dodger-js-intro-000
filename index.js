@@ -11,10 +11,7 @@ const ROCKS = [];
 const START = document.getElementById('start');
 
 var gameInterval = null;
-/**
- * Be aware of what's above this line,
- * but all of your work should happen below.
- */
+
 
 function checkCollision(rock) {
   const top = positionToInteger(rock.style.top);//gives rock's distance from top as an integer (without 'px')
@@ -29,19 +26,8 @@ function checkCollision(rock) {
         (rockLeftEdge <= dodgerRightEdge && rockRightEdge >= dodgerRightEdge)) {
           return true;
         }
+  }
 }
-}
-       /** explaining above logic:
-               * Think about it -- what's happening here?
-               * There's been a collision if one of three things is true:
-               * 1. The rock's left edge is < the DODGER's left edge,
-               *    and the rock's right edge is > the DODGER's left edge;
-               * 2. The rock's left edge is > the DODGER's left edge,
-               *    and the rock's right edge is < the DODGER's right edge;
-               * 3. The rock's left edge is < the DODGER's right edge,
-               *    and the rock's right edge is > the DODGER's right edge
-               */
-
 
 function createRock(x) {
   const rock = document.createElement('div');
@@ -50,14 +36,9 @@ function createRock(x) {
   rock.style.left = `${x}px`;
   var top2 = rock.style.top = 0;
   GAME.appendChild(rock);
-  /**
-   * This function moves the rock. (2 pixels at a time
-   * seems like a good pace.)
-   */
+
   function moveRock() {
-     /* If a rock collides with the DODGER,
-     * we should call endGame()
-     */
+
      rock.style.top = `${top2+=2}px`;
      if (checkCollision(rock)){
        return endGame();
@@ -65,37 +46,16 @@ function createRock(x) {
        window.requestAnimationFrame(moveRock);
      } else {
        rock.remove();
-     }}
+     }
+   }
 
-
-
-    /**
-     * Otherwise, if the rock hasn't reached the bottom of
-     * the GAME, we want to move it again.
-     */
-
-    /**
-     * But if the rock *has* reached the bottom of the GAME,
-     * we should remove the rock from the DOM
-     */
-
-
-  // We should kick of the animation of the rock around here
   window.requestAnimationFrame(moveRock);
-  // Add the rock to ROCKS so that we can remove all rocks
-  // when there's a collision
+
   ROCKS.push(rock);
 
-  // Finally, return the rock element you've created
   return rock;
 }
 
-/**
- * End the game by clearing `gameInterval`,
- * removing all ROCKS from the DOM,
- * and removing the `moveDodger` event listener.
- * Finally, alert "YOU LOSE!" to the player.
- */
 function endGame() {
   clearInterval(gameInterval);
   ROCKS.forEach(function(rock)
