@@ -31,8 +31,8 @@ function checkCollision(rock) {
     const rockLeftEdge = positionToInteger(rock.style.left)
     const rockRightEdge = rockleftEdge + 20;
 
-    if (((rockLeftEdge < dodgerLeftEdge) && (rockRightEdge > dodgerLeftEdge)) 
-    || ((rockleftEdge > dodgerLeftEdge) && (rockRightEdge < dodgerRightEdge)) 
+    if (((rockLeftEdge < dodgerLeftEdge) && (rockRightEdge > dodgerLeftEdge))
+    || ((rockleftEdge > dodgerLeftEdge) && (rockRightEdge < dodgerRightEdge))
     || ((rockLeftEdge < dodgerRightEdge) && (rockRightEdge > dodgerRightEdge))) {
       return true;
     } /**
@@ -61,7 +61,7 @@ function createRock(x) {
   var top = 0
 
   rock.style.top = top; console.log(rock.style.top)
-  
+
 
   /**
    * Now that we have a rock, we'll need to append
