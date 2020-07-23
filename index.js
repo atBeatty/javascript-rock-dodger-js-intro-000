@@ -68,7 +68,7 @@ function createRock(x) {
    * it to GAME and move it downwards.
    */
    GAME.appendChild(rock)
-   GAME.append(rock)
+  //  GAME.append(rock)
 
 
   /**
