@@ -17,7 +17,7 @@ var gameInterval = null
  * but all of your work should happen below.
  */
 
-function checkCollision() {
+function checkCollision(rock) {
   // implement me!
   // use the comments below to guide you!
   const top = positionToInteger(rock.style.top)
@@ -85,6 +85,7 @@ function createRock(x) {
      * Otherwise, if the rock hasn't reached the bottom of
      * the GAME, we want to move it again.
      */
+     
      if(top < 380) {
        for (var i = 0; i < 380; i += 2) {
          rock.style.top += i;
