@@ -69,7 +69,7 @@ function createRock(x) {
    */
    GAME.appendChild(rock)
    GAME.append(rock)
-   
+
 
   /**
    * This function moves the rock. (2 pixels at a time
@@ -82,7 +82,7 @@ function createRock(x) {
      * If a rock collides with the DODGER,
      * we should call endGame().
      */
-     
+
     /**
      * Otherwise, if the rock hasn't reached the bottom of
      * the GAME, we want to move it again.
