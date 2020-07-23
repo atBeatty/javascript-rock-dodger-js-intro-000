@@ -85,7 +85,7 @@ function createRock(x) {
      * Otherwise, if the rock hasn't reached the bottom of
      * the GAME, we want to move it again.
      */
-     
+
      if(top < 380) {
        for (var i = 0; i < 380; i += 2) {
          rock.style.top += i;
